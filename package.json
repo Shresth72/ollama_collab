@@ -1,0 +1,26 @@
+{
+  "name": "ollama_collab",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "vitest",
+    "start:dev": "npx nodemon",
+    "build": "rimraf ./build && tsc",
+    "start": "npm run build && nodemon build/index.js"
+  },
+  "repository": "https://github.com/Shresth72/ollama_collab.git",
+  "author": "Shrestha <97455610+Shresth72@users.noreply.github.com>",
+  "license": "MIT",
+  "dependencies": {
+    "drizzle-orm": "^0.29.3",
+    "vite": "^5.0.12"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.16",
+    "nodemon": "^3.0.3",
+    "rimraf": "^5.0.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3",
+    "vitest": "^1.2.2"
+  }
+}
