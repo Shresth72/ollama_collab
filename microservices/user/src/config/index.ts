@@ -12,7 +12,7 @@ dotenv.config();
 export const PORT = process.env.PORT;
 
 /* ------- SUPABASE ------- */
-export const DATABASE_URL = process.env.DATABASE_URL || "";
+export const SUPABASE_URL = process.env.DATABASE_URL || "";
 
 /* ------- POSTGRES ------- */
 export const POSTGRES_URL = process.env.POSTGRES_URL || "";
