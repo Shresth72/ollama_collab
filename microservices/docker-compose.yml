@@ -6,7 +6,7 @@ services:
     container_name: postgres_db
     restart: always
     ports:
-    - '8000:5432' # Won't work of 5432, as another postgres instance is installed locally 😭
+    - '8000:5432' # Won't work on 5432, as another postgres instance is installed locally 😭
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: v6LU2ysixQqihxon
