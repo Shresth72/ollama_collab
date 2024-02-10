@@ -2,7 +2,6 @@ import { InferInsertModel, InferSelectModel, sql } from "drizzle-orm";
 import {
   jsonb,
   pgTable,
-  serial,
   text,
   timestamp,
   uuid
@@ -19,8 +18,8 @@ export const users = pgTable("users", {
   email: text("email").notNull(),
   password: text("password").notNull(),
   salt: text("salt").notNull(),
-  updated_at: timestamp("updated_at", { withTimezone: true, mode: "string" }),
-  created_at: timestamp("created_at", { withTimezone: true, mode: "string" })
+  updatedAt: timestamp("updated_at", { withTimezone: true, mode: "string" }),
+  createdAt: timestamp("created_at", { withTimezone: true, mode: "string" })
     .default(sql`now()`)
     .notNull(),
   paymentMethod: jsonb("payment_method")

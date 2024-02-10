@@ -1,0 +1,19 @@
+version: '3.9'
+
+services:
+  postgres_db_test:
+    image: postgres:14-alpine
+    container_name: workspace_db
+    restart: always
+    ports:
+    - '8002:5432' # Won't work on 5432, as another postgres instance is installed locally 😭
+    environment:
+      POSTGRES_USER: ollama_workspace
+      POSTGRES_PASSWORD: v6LU2ysixQqihxon
+      POSTGRES_DB: workspace_db
+    volumes:
+    - workspace_db:/var/lib/postgresql/data
+
+volumes:
+  workspace_db:
+    driver: local

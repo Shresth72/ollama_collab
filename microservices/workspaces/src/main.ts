@@ -6,7 +6,7 @@ import App from "./express-app";
 
 dotenv.config();
 
-const StartServer = async() => {
+const StartServer = async () => {
   const app = express();
 
   await App(app);
@@ -16,6 +16,6 @@ const StartServer = async() => {
   app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
   });
-}
+};
 
 StartServer();
